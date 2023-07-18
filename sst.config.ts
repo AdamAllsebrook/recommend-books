@@ -1,24 +1,17 @@
-import type { SSTConfig } from "sst";
-import { SvelteKitSite, RDS } from "sst/constructs";
+import { SSTConfig } from "sst";
+import { Web } from "./stacks/Web";
+import { Database } from "./stacks/Database";
 
 export default {
     config(_input) {
         return {
-            name: "recommend-books",
+            name: "recommend-books-2",
             region: "us-east-1",
         };
     },
     stacks(app) {
-        app.stack(function Site({ stack }) {
-            const rds = new RDS(stack, "Database", {
-                engine: "postgresql13.9",
-                defaultDatabaseName: "reviews",
-                migrations: "migrations",
-            });
-            const site = new SvelteKitSite(stack, "site");
-            stack.addOutputs({
-                url: site.url,
-            });
-        });
-    },
+        app
+            .stack(Database)
+            .stack(Web);
+    }
 } satisfies SSTConfig;
