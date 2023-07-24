@@ -10,7 +10,7 @@
 	<div class="flex flex-col items-center py-8">
 		<!-- <Search /> -->
 	</div>
-	<div class="flex flex-col space-y-32 mx-auto">
+	<div class="flex flex-col space-y-36 mx-auto">
 		{#await data.streamed.books}
 			Loading...
 		{:then books}
