@@ -32,8 +32,8 @@ export const load = (({ url }) => {
                     with constants (query_embedding) as (
                         values (${"[" + embedding.toString() + "]"}::vector(384))
                     )
-                    select res.title, res.description, res.url, res.image, res.year, res.authors from (
-                        select work.id, work.title, 1 - (embedding <=> query_embedding) as distance, b.description, b.url, b.image, work.year, b.authors
+                    select res.title, res.series, res.description, res.url, res.image, res.year, res.authors from (
+                        select work.id, work.title, work.series, 1 - (embedding <=> query_embedding) as distance, b.description, b.url, b.image, work.year, b.authors
                         from constants, review_embed
                         left join review on review_embed.id = review.id
                         left join book on review.bookId = book.id
@@ -41,7 +41,7 @@ export const load = (({ url }) => {
                         left join book as b on work.id = b.workId and b.bestOfWork = true
                         order by embedding <=> query_embedding
                         limit 1000) as res
-                    group by res.id, res.title, res.description, res.url, res.image, res.year, res.authors
+                    group by res.id, res.title, res.series, res.description, res.url, res.image, res.year, res.authors
                     order by sum(distance) desc
                     limit 5;
                     `;

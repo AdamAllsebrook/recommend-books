@@ -10,6 +10,7 @@
 		<img src={book.image} alt={`Cover of ${book.title}`} class="h-64" />
 	</div>
 	<div class="col-start-2">
+		<p class="italic">{book.series}</p>
 		<h2 class="text-4xl font-bold pb-4">{book.title}</h2>
 		<p>{book.authors}</p>
 	</div>

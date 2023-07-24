@@ -5,4 +5,5 @@ export type Book = {
     image: string;
     year: number;
     authors: string;
+    series: string;
 }
