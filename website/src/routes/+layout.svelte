@@ -7,6 +7,12 @@
 	import '../app.postcss';
 
 	import 'iconify-icon';
+	import Search from './Search.svelte';
 </script>
 
+<header class="flex mt-4">
+	<div class="flex w-full space-x-4 ml-4">
+		<a href="/" class="text-lg font-bold my-auto">Cool name here</a>
+	</div>
+</header>
 <slot />
