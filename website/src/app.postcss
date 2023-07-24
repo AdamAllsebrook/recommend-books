@@ -2,11 +2,32 @@
 
 /* custom theme */
 
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
 
 :root {
 	/* =~= Theme Properties =~= */
-	--theme-font-family-base: system-ui;
-	--theme-font-family-heading: system-ui;
+	--theme-font-family-base: 'Lato', sans-serif;
+	--theme-font-family-heading: 'Lato', sans-serif;
 	--theme-font-color-base: 0 0 0;
 	--theme-font-color-dark: 255 255 255;
 	--theme-rounded-base: 0px;
