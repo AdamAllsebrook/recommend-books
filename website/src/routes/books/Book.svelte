@@ -48,13 +48,13 @@
 	</div>
 	<div class="col-start-3 row-start-2 row-span-full space-y-2 z-10">
 		{#if book}
-			<button
-				class="btn bg-black text-white border-2 border-black font-bold space-x-3 py-3 w-full flex justify-end"
-			>
-				<p>Add to My List</p>
-				<div class="w-[1px] h-3 bg-white" />
-				<iconify-icon icon="ri:add-line" width="21" />
-			</button>
+			<!-- <button -->
+			<!-- 	class="btn bg-black text-white border-2 border-black font-bold space-x-3 py-3 w-full flex justify-end" -->
+			<!-- > -->
+			<!-- 	<p>Add to My List</p> -->
+			<!-- 	<div class="w-[1px] h-3 bg-white" /> -->
+			<!-- 	<iconify-icon icon="ri:add-line" width="21" /> -->
+			<!-- </button> -->
 			<a
 				href={book?.url}
 				class="btn border-black border-2 font-bold space-x-3 py-3 w-full flex justify-end"
@@ -82,7 +82,7 @@
 				<iconify-icon icon="ri:arrow-right-up-line" width="21" />
 			</a>
 		{:else}
-			<div class="h-12 w-52 placeholder bg-surface-700 animate-pulse" />
+			<!-- <div class="h-12 w-52 placeholder bg-surface-700 animate-pulse" /> -->
 			<div class="h-12 w-52 placeholder bg-surface-700 animate-pulse" />
 			<div class="h-12 w-52 placeholder bg-surface-700 animate-pulse" />
 		{/if}
