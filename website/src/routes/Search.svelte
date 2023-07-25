@@ -1,5 +1,4 @@
 <script>
-	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
 
 	export let searchText = '';
@@ -12,7 +11,7 @@
 		<input
 			type="text"
 			name="search"
-			placeholder="Search for books using keywords"
+			placeholder="Search for books..."
 			class="input bg-transparent"
 			bind:value={searchText}
 		/>
@@ -24,3 +23,9 @@
 		</button>
 	</div>
 </form>
+
+<style>
+	::placeholder {
+		color: #444;
+	}
+</style>
