@@ -5,14 +5,22 @@
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+	import Favicon from '$lib/assets/favicon.png';
 
 	import 'iconify-icon';
-	import Search from './Search.svelte';
 </script>
+
+<svelte:head>
+	<title>Unnamed Book Search</title>
+	<link rel="icon" href={Favicon} />
+</svelte:head>
 
 <header class="flex mt-4">
 	<div class="flex w-full space-x-4 ml-4">
-		<a href="/" class="text-lg font-bold my-auto">Cool name here</a>
+		<div>
+			<a href="/" class="my-auto"><span class="font-bold text-xl">Unnamed Book Search</span> </a>
+			<a href="https://github.com/AdamAllsebrook" class="block text-right">by Adam Allsebrook</a>
+		</div>
 	</div>
 </header>
 <slot />

@@ -12,7 +12,12 @@
 			Tired of being recommended the same books based on what you have already read?
 		</p>
 		<p>Search for different books using your favourite genres and tropes.</p>
-		<a class="mb-16 lg:mb-32 anchor">How does the search work?</a>
+		<a
+			href="https://github.com/AdamAllsebrook/recommend-books"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="mb-16 lg:mb-32 anchor">How does the search work?</a
+		>
 		<Search />
 	</div>
 	<div class="space-x-5 hidden lg:visible lg:flex">

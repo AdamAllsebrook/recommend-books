@@ -8,6 +8,10 @@
 	const searchQuery = $page.url.searchParams.get('search');
 </script>
 
+<svelte:head>
+	<title>{searchQuery} - Unnamed Book Search</title>
+</svelte:head>
+
 <div class="container h-full mx-auto flex flex-col px-4 lg:px-0">
 	<div class="flex flex-col space-y-40 lg:space-y-48 mx-auto mt-8 lg:mt-0">
 		<Search searchText={searchQuery ?? ''} />
