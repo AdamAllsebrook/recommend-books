@@ -5,11 +5,15 @@ import { encode } from '$lib/inference';
 import { redirect } from '@sveltejs/kit';
 import type { Book } from '$lib/book';
 
-export const load = (({ url }) => {
+export const load = (({ url, setHeaders }) => {
     const query = url.searchParams.get('search');
     if (query === null || query.length === 0) {
         throw redirect(303, '/');
     }
+
+    setHeaders({
+        'Cache-Control': 'max-age=3600'
+    });
 
     return {
         streamed: {
